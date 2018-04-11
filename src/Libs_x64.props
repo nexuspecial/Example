@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BOOST_LIB>C:\local\boost_1_66_0\lib64-msvc-14.1</BOOST_LIB>
+    <BOOST_INC>C:\local\boost_1_66_0</BOOST_INC>
+    <FFMPEG_LIB>C:\local\ffmpeg-3.4.2-win64-dev\lib</FFMPEG_LIB>
+    <FFMPEG_INC>C:\local\ffmpeg-3.4.2-win64-dev\include</FFMPEG_INC>
+    <SDL_LIB>C:\local\SDL2-2.0.8\lib\x64</SDL_LIB>
+    <SDL_INC>C:\local\SDL2-2.0.8\include</SDL_INC>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(BOOST_INC);$(FFMPEG_INC);$(SDL_INC);$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_LIB);$(FFMPEG_LIB);$(SDL_LIB);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="BOOST_LIB">
+      <Value>$(BOOST_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_INC">
+      <Value>$(BOOST_INC)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FFMPEG_LIB">
+      <Value>$(FFMPEG_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FFMPEG_INC">
+      <Value>$(FFMPEG_INC)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SDL_LIB">
+      <Value>$(SDL_LIB)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SDL_INC">
+      <Value>$(SDL_INC)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
